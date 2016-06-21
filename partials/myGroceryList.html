@@ -1,0 +1,11 @@
+<div class='container'>
+    <h1 class='pantryHeaders'>{{gCtrl.title}}</h1>
+    <div>
+        <input type="text" class="form-control groceryList" placeholder="Enter grocery items needed here" ng-model="gCtrl.newItem"><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="gCtrl.myGroceryList()">Add Grocery Item</button>
+
+        <ul class='recipeList'>
+            <li class='listText' ng-repeat="item in gCtrl.enterItemNeeded"> {{item}}  <button type="button" class="btn btn-danger btn-xs clearButton" ng-click='gCtrl.remove($index)'>Delete</button></li>
+        </ul>
+    </div>
+</div>

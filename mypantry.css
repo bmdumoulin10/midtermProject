@@ -1,0 +1,130 @@
+/*Main page layout*/
+
+body, .previous{
+    background: #66b8d9;
+}
+
+.rightArrow{
+    right: 0;
+    left: auto;
+}
+
+.logo{
+    color: #66B8D9;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+.navigationBar{
+    background: #2a4c59;
+}
+
+.navigationBar li a{
+    color: white;
+    font-family: Optima, Monotype;
+    font-size: 16px;
+}
+
+.navigationBar li a:hover {
+    background: #687e87;
+}
+
+.footerBar{
+    margin-top: 20px;
+}
+
+.footerBar li a{
+    color: #2a4c59;
+    font-family: Optima, Monotype;
+}
+
+.signature{
+    font-family: cursive;
+    color: white;
+    margin-top: 15px;
+}
+
+.seperator{
+    border-bottom: 1px solid #2a4c59;
+    padding-bottom: 10px;
+}
+
+/*Home Page Layout*/
+
+img{
+    margin: 0 auto;
+}
+
+.bodyContent{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*My Pantry Layout*/
+
+.pantryHeaders{
+    font-family: cursive;
+    color: #2a4c59;
+}
+
+.floater{
+    float: right;
+}
+
+/*Search Recipes Layout*/
+
+.searchInput{
+    width: 50%;
+}
+
+.searchButton{
+    font-family: Optima, Monotype;
+    color: white;
+    background: #2a4c59;
+    border: 1px solid #2a4c59;
+}
+
+.searchButton:hover{
+    background: #687e87;
+    color: white;
+}
+
+.results{
+    margin-top: 30px;
+}
+
+.results ul{
+  list-style: none;
+}
+
+.results ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.clearButton{
+    font-family: Optima, Monotype;
+    background: #2a4c59;
+    border: 1px solid #2a4c59;
+}
+
+/*My Cookbook Layout*/
+
+.recipeList{
+    list-style-type: none;
+}
+
+.recipeList li{
+  font-size: 20px;
+  font-family: Optima, Monotype;
+}
+
+/*Grocery List Layout*/
+
+.groceryList{
+    width: 50%;
+}
+
+.listText{
+    font-size: 18px;
+}

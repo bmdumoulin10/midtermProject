@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html ng-app="routerApp">
+
+    <head>
+        <title>My Pantry</title>
+        <!-- jQuerey -->
+        <script rel='javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js'></script>
+        <!-- CSS Framework (Bootstrap)-->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css'></script>
+        <!-- Personal CSS -->
+        <link rel='stylesheet' href='mypantry.css'></script>
+        <!-- Angular -->
+        <script rel='javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.js'></script>
+    </head>
+
+    <body>
+
+      <!--Upper Navigation Bar-->
+      <nav class='navigationBar'>
+        <ul class='nav nav-justified'>
+          <li>
+            <span class='logo'>MyPantry</span>
+          </li>
+          <li>
+            <a ui-sref="home">Home</a>
+          </li>
+          <li>
+            <a ui-sref="myPantry">My Pantry</a>
+          </li>
+          <li>
+            <a ui-sref="searchRecipes">Search Recipes</a>
+          </li>
+          <li>
+            <a ui-sref="myGroceryList">My Grocery List</a>
+          </li>
+          <li>
+            <a ui-sref="myCookBook">My Cookbook</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ui-view>
+        <!--This area is replaced with each partial page!!  -->
+      </ui-view>
+
+        <!--Lower Navigation Bar-->
+        <nav class='container footerBar'>
+          <ul class='nav nav-justified'>
+            <li>
+              <a href='#'>About</a>
+            </li>
+            <li>
+              <a href='#'>Contact</a>
+            </li>
+            <li>
+              <a href='#'>Site Map</a>
+            </li>
+            <li>
+              <a href='#'>Terms &amp; Privacy</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class='container signature'>Brian Dumoulin 2016</div>
+
+        <!--Bootsrap JS-->
+        <script rel='javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+        <script rel='javascript' src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+
+        <!--Bower Components for UI Router-->
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+        <!--UI Router & All Controllers-->
+        <script rel='javascript' src='main.js'></script>
+    </body>
+</html>

@@ -1,0 +1,150 @@
+<div class='container seperator'>
+
+  <div class='row'>
+      <div class='col-md-3'>
+          <h1 class='pantryHeaders text-center'>Proteins</h1>
+      </div>
+      <div class='col-md-3'>
+          <h1 class='pantryHeaders text-center'>Produce</h1>
+      </div>
+      <div class='col-md-3'>
+          <h1 class='pantryHeaders text-center'>Grains</h1>
+      </div>
+      <div class='col-md-3'>
+          <h1 class='pantryHeaders text-center'>Dairy</h1>
+      </div>
+  </div>
+
+  <div class='row'>
+      <div class='col-md-3'>
+        <input type="text" class="form-control" placeholder="Enter Protein" ng-model="pCtrl.newProtein"><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addProtein()">Add Protein</button>
+          <ul class='recipeList'>
+            <li ng-repeat='protein in pCtrl.enterProtein'>{{ protein }} <button type='button' class='btn btn-danger btn-xs clearButton' ng-click='pCtrl.removeProtein($index)'>Delete</button></li>
+          </ul>
+      </div>
+      <div class='col-md-3'>
+        <input type="text" class="form-control" placeholder="Enter Produce" ng-model="pCtrl.newProduce"><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addProduce()">Add Produce</button>
+          <ul class='recipeList'>
+            <li ng-repeat='produce in pCtrl.enterProduce'>{{ produce }} <button type='button' class='btn btn-danger btn-xs clearButton' ng-click='pCtrl.removeProduce($index)'>Delete</button></li>
+          </ul>
+      </div>
+      <div class='col-md-3'>
+        <input type="text" class="form-control" placeholder="Enter Grains" ng-model="pCtrl.newGrain"><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addGrain()">Add Grains</button>
+          <ul class='recipeList'>
+            <li ng-repeat='grain in pCtrl.enterGrain'>{{ grain}} <button type='button' class='btn btn-danger btn-xs clearButton' ng-click='pCtrl.removeGrain($index)'>Delete</button></li>
+          </ul>
+      </div>
+      <div class='col-md-3'>
+        <input type="text" class="form-control" placeholder="Enter Dairy" ng-model="pCtrl.newDairy"><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="pCtrl.addDairy()">Add Dairy</button>
+          <ul class='recipeList'>
+            <li ng-repeat='dairy in pCtrl.enterDairy'>{{ dairy }} <button type='button' class='btn btn-danger btn-xs clearButton' ng-click='pCtrl.removeDairy($index)'>Delete</button></li>
+          </ul>
+      </div>
+  </div>
+    <!-- <h1 class='pantryHeaders'>Proteins <button type='button' class='btn btn-default searchButton floater' ng-click='pCtrl.myPantry()'>Save Pantry</button></h1>
+
+    <div class='row seperator'>
+          <div class='col-md-3'>
+            <h4>Nuts &amp; Seeds</h4>
+            <form ng-repeat="nutSeed in pCtrl.nutsSeeds | orderBy:nutSeed" >
+                <input type="checkbox" ng-model='pCtrl.checkedNuts[$index]'>{{ nutSeed }}
+            </form>
+            <h4>Soy Products</h4>
+            <form ng-repeat="soy in pCtrl.soyProducts | orderBy:soy" >
+                <input type="checkbox">{{ soy }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Meat &amp; Poultry</h4>
+            <form ng-repeat="meat in pCtrl.meats | orderBy:meat" >
+                <input type="checkbox">{{ meat }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Seafood</h4>
+            <form ng-repeat="food in pCtrl.seafood | orderBy:food" >
+                <input type="checkbox">{{ food }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Beans &amp; Peas</h4>
+            <form ng-repeat="beanPea in pCtrl.beansPeas | orderBy:beanPea" >
+                <input type="checkbox">{{ beanPea }}
+            </form>
+            <h4>Eggs</h4>
+            <form ng-repeat="egg in pCtrl.eggs | orderBy:egg" >
+                <input type="checkbox">{{ egg }}
+            </form>
+          </div>
+    </div>
+
+    <h1 class='pantryHeaders'>Vegetables <button type='button' class='btn btn-default searchButton floater'>Save Pantry</button></h1>
+
+    <div class='row seperator'>
+          <div class='col-md-3'>
+            <h4>Green Vegetables</h4>
+            <form ng-repeat="green in pCtrl.vegetables1 | orderBy:green" >
+                <input type="checkbox">{{ green }}
+            </form>
+            <h4>Starchy Vegetables</h4>
+            <form ng-repeat="starchy in pCtrl.vegetables2 | orderBy:starchy" >
+                <input type="checkbox">{{ starchy }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Red &amp; Orange Vegetables</h4>
+            <form ng-repeat="red in pCtrl.vegetables3 | orderBy:red" >
+                <input type="checkbox">{{ red }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Other Vegetables</h4>
+            <form ng-repeat="other1 in pCtrl.vegetables4 | orderBy:other1" >
+                <input type="checkbox">{{ other1 }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Other Vegetables Cont.</h4>
+            <form ng-repeat="other2 in pCtrl.vegetables5 | orderBy:other2" >
+                <input type="checkbox">{{ other2 }}
+            </form>
+          </div>
+    </div>
+
+    <h1 class='pantryHeaders'>Fruits, Dairy, Grains, &amp; Oils <button type='button' class='btn btn-default searchButton floater'>Save Pantry</button></h1>
+
+    <div class='row seperator'>
+          <div class='col-md-3'>
+            <h4>Berries, Melons, &amp; Juices</h4>
+            <form ng-repeat="fruit1 in pCtrl.fruits1 | orderBy:fruit1" >
+                <input type="checkbox">{{ fruit1 }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Other Fruits</h4>
+            <form ng-repeat="fruit2 in pCtrl.fruits2 | orderBy:fruit2" >
+                <input type="checkbox">{{ fruit2 }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Dairy</h4>
+            <form ng-repeat="dairy in pCtrl.dairy1 | orderBy:dairy" >
+                <input type="checkbox">{{ dairy }}
+            </form>
+          </div>
+          <div class='col-md-3'>
+            <h4>Grains</h4>
+            <form ng-repeat="grain in pCtrl.grains | orderBy:grain" >
+                <input type="checkbox">{{ grain }}
+            </form>
+            <h4>Oils</h4>
+            <form ng-repeat="oil in pCtrl.oils | orderBy:oil" >
+                <input type="checkbox">{{ oil }}
+            </form>
+          </div>
+    </div> -->
+</div>

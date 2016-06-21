@@ -1,0 +1,14 @@
+<div class='container'>
+    <h1 class='pantryHeaders'>{{cCtrl.title}}</h1>
+
+
+    <div>
+        <input type="text" class="form-control" placeholder="Enter name of your recipe here" ng-model="cCtrl.newName"><br>
+        <textarea class="form-control" rows="10" placeholder='Enter recipe directions here' ng-model="cCtrl.newDirections"></textarea><br>
+        <button class="btn btn-default searchButton" type="button" ng-click="cCtrl.addRecipe()">Add Recipe</button>
+
+        <ul class='recipeList'>
+            <li class='seperator'ng-repeat="recipe in cCtrl.enterRecipe"><h3 class='pantryHeaders'>{{ recipe.name }} <button type="button" class="btn btn-danger btn-xs clearButton" ng-click='cCtrl.remove($index)'>Delete</button></h3> {{recipe.directions}}</li>
+        </ul>
+    </div>
+</div>
